@@ -1,0 +1,24 @@
+{
+  "name": "pop_the_balloon",
+  "version": "1.0.0",
+  "description": "A pop the balloon is a simple game where player pop the balloon by clicking the balloon appear in the screen",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build:css": "npx tailwindcss -i ./src/css/input.css -o ./src/css/style.css --watch"
+  },
+  "keywords": [
+    "tailwind",
+    "js",
+    "html",
+    "css",
+    "animation",
+    "game",
+    "interactive"
+  ],
+  "author": "Lalit Rajbanshi",
+  "license": "ISC",
+  "devDependencies": {
+    "tailwindcss": "^3.4.17"
+  }
+}
