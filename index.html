@@ -12,20 +12,20 @@
         href="https://fonts.googleapis.com/css2?family=Irish+Grover&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
         rel="stylesheet">
     <title>POP THE BALLOON</title>
-    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./src/css/style.css">
 </head>
 
 <body class="relative select-none overflow-hidden w-screen h-screen bg-gradient-to-tr from-slate-200 to-slate-400">
     <main class="welcomePage max-w-[800px] md:max-w-full flex flex-col justify-center items-center mx-auto h-full relative">
         <div class="sound-icon-btn cursor-pointer fixed bottom-6 left-4">
-            <img class="hidden volume-up" src="./asset/icon/volumeUp.svg">
-            <img isActive="true" class="volume-mute" src="./asset/icon/volumeMute.svg">
+            <img class="hidden volume-up" src="./src/asset/icon/volumeUp.svg">
+            <img isActive="true" class="volume-mute" src="./src/asset/icon/volumeMute.svg">
         </div>
         <h1 class="font-irish-grover text-[2.5rem] md:text-6xl lg:text-8xl text-center pt-[64px]">Welcome To<br>POP THE BALLOON</h1>
         <span class="font-irish-grover text-green-800 text-4xl high-score pt-10">High Score: <span id="high-score">000</span></span>
         <div class="start-balloon relative md:translate-y-[100%] left-[40%] md:left-[0%] translate-x-[-50%] pt-3 flex justify-center w-[20rem] h-fit cursor-pointer">
             <span class="fixed top-[7rem] z-10 left-[50%] translate-x-[-50%] font-irish-grover text-white text-4xl">Start</span>
-            <img class="w-auto saturate-200 contrast-75" src="./asset/ballon.png" alt="balloon">
+            <img class="w-auto saturate-200 contrast-75" src="./src/asset/ballon.png" alt="balloon">
         </div>
     </main>
     <!-- gameboard page -->
@@ -48,9 +48,9 @@
             </div>
         </div>
      </section>
-     <audio class="homepageSound" src="./asset/audio/gameMusic.mp3" loop></audio>
-     <audio class="popBalloonSound" src="./asset/audio/popBallon.mp3"></audio>
-    <script src="./js/index.js"></script>
+     <audio class="homepageSound" src="./src/asset/audio/gameMusic.mp3" loop></audio>
+     <audio class="popBalloonSound" src="./src/asset/audio/popBallon.mp3"></audio>
+    <script src="./src/js/index.js"></script>
 </body>
 
 </html>
