@@ -168,9 +168,10 @@ const generateBalloons = () => {
 
 
 const setTime = ()=>{
+  totalTime +=1;
   timeInterval = setInterval(()=>{
     if(totalTime <= 0){
-      return openMenu()
+      return openMenu(true)
     } 
     totalTime--;
     time.textContent = totalTime < 10 ? `0${totalTime}` : totalTime
@@ -267,7 +268,7 @@ const exitGame = () => {
   }
 };
 
-const openMenu = () => {
+const openMenu = (playAgain = false) => {
   homepageSound.volume = 1
   let isPaused = menuBtn.textContent.includes("Pause");
   if (isPaused) {
@@ -280,14 +281,28 @@ const openMenu = () => {
     clearInterval(intervalId);
     intervalId = 0;
     clearInterval(timeInterval)
+  }
+  if(playAgain){
+    // showHide(resetBtn, "none")
+    resumeBtn.textContent = `Your Score: ${score}`
+    resumeBtn.disabled = "true"
+    resetBtn.textContent = "Play Again"
+    resetBtn.addEventListener("click", resetGame);
+    exitBtn.addEventListener("click", exitGame);
+  }
+  else{
+    resumeBtn.disabled = "false"
+    resumeBtn.textContent = "Resume"
+    resetBtn.textContent = "Reset"
     resumeBtn.addEventListener("click", resumeGame);
     resetBtn.addEventListener("click", resetGame);
     exitBtn.addEventListener("click", exitGame);
   }
 };
 // openGameBoard();
+const openM =()=> openMenu(false)
 startGame.addEventListener("click", openGameBoard);
-menuBtn.addEventListener("click", openMenu);
+menuBtn.addEventListener("click", openM);
 body.addEventListener("mouseover", showStart);
 body.addEventListener("mouseout", hideStart);
 
