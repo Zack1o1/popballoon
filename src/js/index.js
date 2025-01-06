@@ -32,7 +32,7 @@ const storeHighScore = (currentScore)=>{
 }
 highScoreText.textContent = currentHighScore
 
-console.log(currentHighScore)
+// console.log(currentHighScore)
 
 welcomePage.addEventListener('click',()=>{
   homepageSound.play()
@@ -155,7 +155,7 @@ const createBalloons = () => {
     } else {
       scoreText.textContent = score;
     }
-    console.log(score);
+    // console.log(score);
     highScoreText.textContent = (score > currentHighScore) ? score : currentHighScore;
     (score > currentHighScore) ? storeHighScore(score) : storeHighScore(currentHighScore) 
   });
@@ -170,7 +170,7 @@ const generateBalloons = () => {
 const setTime = ()=>{
   totalTime +=1;
   timeInterval = setInterval(()=>{
-    if(totalTime <= 0){
+    if(totalTime <= 56){
       return openMenu(true)
     } 
     totalTime--;
@@ -206,6 +206,7 @@ const resumeGame = () => {
   homepageSound.volume = 0
   showHide(menu, "none");
   menuBtn.textContent = "Pause";
+  menuBtn.style.visibility = "visible"
   toggleBlur(false);
   balloonContainer.style.opacity = "1";
   togglePop(false);
@@ -221,6 +222,7 @@ const resetGame = () => {
   showHide(menu, "none");
   showHide(gameBoard, "flex");
   menuBtn.textContent = "Pause";
+  menuBtn.style.visibility = "visible"
   toggleBlur(false);
   balloonContainer.style.opacity = "1";
   const balloons = document.querySelectorAll(".balloon");
@@ -241,6 +243,7 @@ const exitGame = () => {
   showHide(gameBoard, "none");
   showHide(welcomePage, "flex");
   menuBtn.textContent = "Pause";
+  menuBtn.style.visibility = "visible"
   toggleBlur(false);
   homepageSound.volume = 1
   balloonContainer.style.opacity = "1";
@@ -283,7 +286,7 @@ const openMenu = (playAgain = false) => {
     clearInterval(timeInterval)
   }
   if(playAgain){
-    // showHide(resetBtn, "none")
+    menuBtn.style.visibility = "hidden"
     resumeBtn.textContent = `Your Score: ${score}`
     resumeBtn.disabled = "true"
     resetBtn.textContent = "Play Again"
@@ -300,7 +303,10 @@ const openMenu = (playAgain = false) => {
   }
 };
 // openGameBoard();
-const openM =()=> openMenu(false)
+const openM =()=> {
+  openMenu(false)
+  menuBtn.style.visibility = "hidden"
+}
 startGame.addEventListener("click", openGameBoard);
 menuBtn.addEventListener("click", openM);
 body.addEventListener("mouseover", showStart);
