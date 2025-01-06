@@ -170,7 +170,7 @@ const generateBalloons = () => {
 const setTime = ()=>{
   totalTime +=1;
   timeInterval = setInterval(()=>{
-    if(totalTime <= 56){
+    if(totalTime <= 0){
       return openMenu(true)
     } 
     totalTime--;
