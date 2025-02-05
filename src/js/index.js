@@ -163,7 +163,6 @@ const createBalloons = () => {
 
 const generateBalloons = () => {
   intervalId = setInterval(createBalloons, 500);
-  
 };
 
 
@@ -311,5 +310,3 @@ startGame.addEventListener("click", openGameBoard);
 menuBtn.addEventListener("click", openM);
 body.addEventListener("mouseover", showStart);
 body.addEventListener("mouseout", hideStart);
-
-
