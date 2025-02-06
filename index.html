@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="author" content="Lalit Rajbanshi">
-    <meta name="keywords" content="ballon,js,html,css,animation">
-    <link rel="icon" type="image/x-icon" href="./asset/balloon.png">
+    <meta name="keywords" content="ballon,js,html,css,animation,pharser">
+    <link rel="icon" type="image/x-icon" href="./src/asset/balloon.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
@@ -14,43 +14,9 @@
     <title>POP THE BALLOON</title>
     <link rel="stylesheet" href="./src/css/style.css">
 </head>
-
-<body class="relative select-none overflow-hidden w-screen h-screen bg-gradient-to-tr from-slate-200 to-slate-400">
-    <main class="welcomePage max-w-[800px] md:max-w-full flex flex-col justify-center items-center mx-auto h-full relative">
-        <div class="sound-icon-btn cursor-pointer fixed bottom-6 left-4">
-            <img class="hidden volume-up" src="./src/asset/icon/volumeUp.svg">
-            <img isActive="true" class="volume-mute" src="./src/asset/icon/volumeMute.svg">
-        </div>
-        <h1 class="font-irish-grover text-[2.5rem] md:text-6xl lg:text-8xl text-center pt-[64px]">Welcome To<br>POP THE BALLOON</h1>
-        <span class="font-irish-grover text-green-800 text-4xl high-score pt-10">High Score: <span id="high-score">000</span></span>
-        <div class="start-balloon relative md:translate-y-[100%] left-[40%] md:left-[0%] translate-x-[-50%] pt-3 flex justify-center w-[20rem] h-fit cursor-pointer">
-            <span class="fixed top-[7rem] z-10 left-[50%] translate-x-[-50%] font-irish-grover text-white text-4xl">Start</span>
-            <img class="w-auto saturate-200 contrast-75" src="./src/asset/ballon.png" alt="balloon">
-        </div>
-    </main>
-    <!-- gameboard page -->
-    <section id="gameBoard" class="fixed top-0 h-screen w-full hidden">
-        <div class="rounded-full text-center flex justify-center items-center w-20 h-20 border-8 text-4xl font-irish-grover p-2 border-black  fixed left-[50%] translate-x-[-50%] top-4"><span id="time">59</span></div>
-        <div class="relative h-screen w-screen">
-            <div class="control fixed bottom-0 w-full flex justify-between p-6 pb-3">
-                <span class="font-irish-grover text-4xl pause-btn cursor-pointer">Pause</span>
-                <span class="scoreUpdateMessage hidden translate-x-[-50%] bottom-[10px] bg-transparent shadow-xl py-4 px-14 absolute left-1/2 font-irish-grover text-6xl">+4</span>
-                <span class="font-irish-grover text-4xl update-score">Score:<span id="score">000</span></span>
-
-            </div>
-            <div class="balloon-container h-[90%] grid place-content-center  overflow-hidden relative z-0">
-                <!-- <img class="balloon w-[200px]" src="./asset/ballon.png" alt="balloon"> -->
-            </div>
-            <div class="menu z-[300] hidden translate-x-[-50%] top-1/4 fixed left-1/2 p-20 w-[500px] shadow-xl bg-transparent flex-col gap-3 justify-center items-center">
-                <span class="font-irish-grover text-4xl cursor-pointer resume-btn">Resume</span>
-                <span class="font-irish-grover text-4xl cursor-pointer reset-btn">Reset</span>
-                <span class="font-irish-grover text-4xl cursor-pointer exit-btn">Exit</span>
-            </div>
-        </div>
-     </section>
-     <audio class="homepageSound" src="./src/asset/audio/gameMusic.mp3" loop></audio>
-     <audio class="popBalloonSound" src="./src/asset/audio/popBallon.mp3"></audio>
+<body class="h-screen grid place-content-center overflow-hidden">
+    <div class="scene"></div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/phaser/3.87.0/phaser.min.js" integrity="sha512-e251dDfxfj70o3iWsf84M612cWbWdTXjVbFXA7MavobTcKB1sCLV+WNiduc20UrpWLXRgi1tgob1TOAfySx9Xg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="./src/js/index.js"></script>
 </body>
-
 </html>
