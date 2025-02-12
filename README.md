@@ -1,12 +1,13 @@
 ## Pop The Balloon Game
 
-This is a simple and fun web-based game where the objective is to pop as many balloons as possible within a given time frame. The game is built using HTML, CSS, and JavaScript.
+This is a simple and fun web-based game where the objective is to pop as many balloons as possible within a given time frame. The game is built using Phaser JS.
 
 ### Features
 
 - **Interactive Gameplay**: Click on balloons to pop them and score points.
-- **Dynamic Balloon Generation**: Balloons appear at random positions and sizes.
-- **Scoring System**: Different colored balloons give different points.
+- **Dynamic Balloon Generation**: Balloons appear at from bottom positions.
+- **Scoring System**: Pop the appeared balloon.
+- **Game Over**: If time is up and balloon is touched with above wall.
 - **High Score Tracking**: The highest score is stored in the browser's local storage.
 - **Sound Effects**: Includes sound effects for popping balloons and background music.
 - **Pause and Resume**: Ability to pause and resume the game.
@@ -17,10 +18,13 @@ This is a simple and fun web-based game where the objective is to pop as many ba
 
 1. Click the "Start" button to begin the game.
 2. Pop the balloons by clicking on them to score points.
-3. The game ends when the timer runs out.
+3. The game ends when the timer runs out and hit with above wall.
 4. You can pause, resume, reset, or exit the game using the menu options.
 
-
+![Homepage Screenshot](https://github.com/Zack1o1/popballoon/blob/master/gameDemoImages/homepage.png?raw=true)
+![GameScene](https://github.com/Zack1o1/popballoon/blob/master/gameDemoImages/gamepage.png?raw=true)
+![Pause](https://github.com/Zack1o1/popballoon/blob/master/gameDemoImages/pausepage.png?raw=true)
+![Over](https://github.com/Zack1o1/popballoon/blob/master/gameDemoImages/gameover.png?raw=true)
 ### Bugs encounter
 Feel free to report the bugs you encounter while playing
 Also, will be great if you comment how the game is or need any improvement
